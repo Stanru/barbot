@@ -1,0 +1,29 @@
+server:
+  port: 8090
+
+spring:
+  sql:
+    init:
+      mode: always
+  application:
+    name: bar-bot
+  datasource:
+    url: jdbc:h2:file:./barbot
+    username: root
+    password: sdf56DS8sda
+  h2:
+    console.enabled: true
+  jpa:
+    defer-datasource-initialization: always
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: "Europe/Moscow"
+
+app:
+  telegram-bot:
+    name: <NAME>
+    token: <TOKEN>
